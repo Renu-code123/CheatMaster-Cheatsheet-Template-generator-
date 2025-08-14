@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en" data-page="html">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HTML Cheatsheet</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="prism.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- HEADER -->
+    <header class="header">
+      <div class="brand">
+        <div class="logo"></div>
+        <h1><span>CheatMaster</span> • HTML</h1>
+      </div>
+      <div class="actions">
+        <a class="btn" href="index.html">Home</a>
+        <button class="btn" id="print" title="Print (Ctrl/Cmd+P)">Print <span class="kbd">Ctrl/⌘+P</span></button>
+        <button class="btn danger" id="clear-all" title="Remove all entries">Clear All</button>
+        <button class="btn" id="theme-toggle" title="Toggle Light/Dark Theme">🌓</button>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero card">
+      <div>
+        <h2 class="title">HTML Cheatsheet</h2>
+        <p class="subtitle">
+          Add your own snippets, copy code with one click, print, save locally, and remove whenever you want.
+        </p>
+      </div>
+    </section>
+
+    <!-- MAIN GRID -->
+    <div class="grid" style="margin-top:16px">
+      <!-- FORM -->
+      <section class="col-4 card form">
+        <form id="entry-form">
+          <label for="topic">Topic</label>
+          <input id="topic" type="text" placeholder="e.g., Center a div" required />
+          <label for="desc">Description (optional)</label>
+          <textarea id="desc" placeholder="Short description..."></textarea>
+          <label for="code">Code</label>
+          <textarea id="code" placeholder="Paste or write your code snippet here" required></textarea>
+          <div style="display:flex; gap:10px; margin-top:12px">
+            <button class="btn primary" type="submit">Save Entry</button>
+            <button class="btn" type="reset">Reset</button>
+          </div>
+        </form>
+      </section>
+
+      <!-- LIST -->
+      <section class="col-8 card list" id="list" aria-live="polite">
+        <div class="item">
+          <div class="meta">
+            <h3>Center a div</h3>
+            <p>Using Flexbox</p>
+          </div>
+          <div class="code">
+            <div class="buttons">
+              <button class="btn small" data-copy>Copy</button>
+              <button class="btn small danger" data-remove>Remove</button>
+            </div>
+<pre><code class="language-html">&lt;div class="center"&gt;Hello&lt;/div&gt;
+&lt;style&gt;
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+&lt;/style&gt;</code></pre>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!-- FOOTER (Exact same as index.html) -->
+   <footer class="footer">
+    <div class="footer-container">
+      <p>💡 Built with ❤️ by Renu Kumari Prajapati | © <span id="year"></span> CheatMaster</p>
+      <p class="footer-links">
+        <a href="index.html">Home</a> |
+        <a href="mailto:renukumari@example.com">Contact</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="prism.js"></script>
+  <script src="app.js" defer></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const themeToggle = document.getElementById('theme-toggle');
+    themeToggle.addEventListener('click', () => {
+      document.body.classList.toggle('light-theme');
+      localStorage.setItem('theme', document.body.classList.contains('light-theme') ? 'light' : 'dark');
+    });
+    if (localStorage.getItem('theme') === 'light') {
+      document.body.classList.add('light-theme');
+    }
+  </script>
+</body>
+</html>
