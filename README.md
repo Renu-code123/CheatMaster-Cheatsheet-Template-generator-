@@ -1,6 +1,7 @@
 # CheatMaster-Cheatsheet-Template-generator-<br>
 A simple and customizable Cheatsheet Template Generator for HTML, CSS, and JavaScript. <br>
 It comes with a pre-filled list of useful syntax, tags, and commands, while allowing you to add your own snippets, shortcuts, and notes for quick access. <br><br>
+<hr>
 
 ✨ Features: <br>
 • 🖊 Customizable – Add, edit, and delete your own entries. <br>
@@ -9,11 +10,13 @@ It comes with a pre-filled list of useful syntax, tags, and commands, while allo
 • 📋 Copy with one click for any snippet. <br>
 • 💾 Local storage support – Keeps your custom cheats even after page reload. <br>
 • 🌗 Dark/Light mode toggle. <br><br>
+<hr>
 
 🎯 Ideal For: <br>
 • 📄 Web development learners. <br>
 • 📚 Students preparing for coding exams or interviews. <br>
 • 👩‍💻 Developers needing quick syntax references. <br><br>
+<hr>
 
 🚀 How to Use: <br>
 1️⃣ Open the HTML, CSS, or JS cheatsheet page. <br>
